@@ -146,13 +146,14 @@ const Gallery = () => {
                       </div>
 
                       <div className="abs-center w-100 text-container">
-                        <h5 className="text-white overlay-text text-center">
-                          <Link href={`/gallery/${item?.id}`} target="_blank">
+                        <Link href={`/gallery/${item?.id}`} target="_blank">
+                          <h3 className="text-white overlay-text text-center mb-2">
                             {item.tilte}
-                          </Link>
-
-                          <span>{item.date}</span>
-                        </h5>
+                          </h3>
+                          <p className="text-white overlay-text text-center">
+                            <span>{item.date}</span>
+                          </p>
+                        </Link>
                       </div>
                       <div className="overlay"></div>
                     </div>

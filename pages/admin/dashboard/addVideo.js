@@ -4,6 +4,7 @@ import classNames from "classnames";
 import NavBar from "../components/content/Navbar";
 import { getVideos } from "../../../firebase/getVideos";
 import AddVideoModal from "../components/addVideoModal";
+import LinesEllipsis from "react-lines-ellipsis";
 
 const AddVideo = (props) => {
   const [modal, setModal] = useState(false);
@@ -11,8 +12,6 @@ const AddVideo = (props) => {
   const [loading, setLoading] = useState(false);
   
   const toggleModal = () => setModal(!modal);
-
-console.log(videos)
   useEffect(() => {
     setLoading(true);
     const fetchVideos = async () => {
@@ -85,12 +84,17 @@ console.log(videos)
                       ></iframe>
                       <div style={{ padding: "5px 10px" }}>
                         <h5 class="card-title">{el.title}</h5>
-                        <p class="card-text">{el.description}</p>
+                        <LinesEllipsis
+                          text={el.description}
+                          maxLine="3"
+                          ellipsis="..."
+                          trimRight
+                          basedOn="letters"
+                        />
                       </div>
                     </div>
                   </div>
                 ))}
-               
               </Row>
             </Col>
           </Row>

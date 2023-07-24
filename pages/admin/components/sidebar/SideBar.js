@@ -29,21 +29,21 @@ const SideBar = (props) => {
       <Nav vertical className="list-unstyled pb-3">
         <NavItem>
           {/* <FontAwesomeIcon icon={faBriefcase} className="mr-2" /> */}
-          <Link className="my_nav" href={`/admin/pages/addGallery`}>
+          <Link className="my_nav" href={`/admin/dashboard/addGallery`}>
             <GalleryIcon />
             Add Gallery
           </Link>
         </NavItem>
         <NavItem>
           {/* <FontAwesomeIcon icon={faQuestion} className="mr-2" /> */}
-          <Link className="my_nav" href={`/admin/pages/addVideo`}>
+          <Link className="my_nav" href={`/admin/dashboard/addVideo`}>
             <VideoIcon />
             Add Video
           </Link>
         </NavItem>
         <NavItem>
           {/* <FontAwesomeIcon icon={faPaperPlane} className="mr-2" /> */}
-          <Link className="my_nav" href={`/admin/pages/addBlog`}>
+          <Link className="my_nav" href={`/admin/dashboard/addBlog`}>
             <BlogIcon />
             Add Blog
           </Link>
